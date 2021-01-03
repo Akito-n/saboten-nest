@@ -13,20 +13,20 @@ services:
         target: /api
     restart: always
     depends_on:
-      - db
+      - saboten_db
 
-  db:
+  saboten_db:
     image: postgres:11
-    #container_name: wave_db
+    container_name: saboten_db
     ports:
       - '5432:5432'
-    # volumes:
-    #   - ./db/postgres/init.d:/docker-entrypoint-initdb.d
-    #   - ./db/postgres/pgdata:/var/lib/postgresql/data
+    volumes:
+      - ./db/postgres/init.d:/docker-entrypoint-initdb.d
+      - ./db/postgres/pgdata:/var/lib/postgresql/data
     environment:
       POSTGRES_USER: root # DB USER
       POSTGRES_PASSWORD: root # DB Password
       POSTGRES_INITDB_ARGS: '--encoding=UTF-8'
-    hostname: postgres
+    hostname: saboten
     user: root
     restart: always

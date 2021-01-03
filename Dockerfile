@@ -1,4 +1,5 @@
 FROM node:14 
+FROM postgres:12
 # install NestJS
 RUN npm install -g @nestjs/cli
 
