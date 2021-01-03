@@ -1,5 +1,4 @@
 FROM node:14 
-FROM postgres:12
 # install NestJS
 RUN npm install -g @nestjs/cli
 
@@ -19,4 +18,4 @@ RUN apt-get update && apt-get upgrade -y
 # install lib (opt : vim)
 RUN apt-get install -y build-essential libpq-dev postgresql-client vim
 
-CMD [ "yarn", "start"]
+CMD [ "yarn", "start:dev"]

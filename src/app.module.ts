@@ -11,11 +11,13 @@ import { SampleResolver } from './resolvers/sample.Resolver';
   imports: [BookModule,
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'saboten',
+      host: 'db',
       port: 5432,
       username: 'root',
       password: 'root',
-      synchronize: false
+      database: 'saboten',
+      synchronize: false,
+      retryAttempts: 1
     }),
 
     GraphQLModule.forRoot({
