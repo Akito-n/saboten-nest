@@ -2,11 +2,11 @@ import { Field, ObjectType, ID } from "@nestjs/graphql";
 import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 @ObjectType()
-@Entity()
+@Entity('books')
 export class BookModel {
   @Field((type) => ID )
-  @PrimaryGeneratedColumn()
-  id: number
+  @PrimaryGeneratedColumn('uuid')
+  id: string
 
   @Field()
   @Column()
