@@ -9,7 +9,7 @@ export class BookModel {
   id: number
 
   @Field()
-  @Column({})
+  @Column()
   title: string
 
   @Field()

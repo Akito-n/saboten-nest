@@ -1,6 +1,10 @@
-# ------------------------------------------------------
+\# ------------------------------------------------------
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
+
+type Mutation {
+  updatePost(id: Float!): Float!
+}
 
 type Query {
   sayBook: String!
