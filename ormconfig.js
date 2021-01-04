@@ -1,3 +1,4 @@
+const TypeOrmNamingStrategy = require('./TypeOrmNamingStrategy.js')
 module.exports = {
   type: "postgres",
   host: "db",
@@ -9,5 +10,6 @@ module.exports = {
   migrations: ["src/migration/*"],
    cli: {
      migrationsDir: "src/migration",
-  }
+  },
+  namingStrategy: new TypeOrmNamingStrategy()
 }
