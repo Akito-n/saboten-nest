@@ -6,7 +6,7 @@ module.exports = {
   password: "root",
   database: "saboten",
   entities: ["src/**/*.model.ts"],
-  migrations: ["src/migrations/*"],
+  migrations: ["src/migration/*"],
    cli: {
      migrationsDir: "src/migrations",
   }
