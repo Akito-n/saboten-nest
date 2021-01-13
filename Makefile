@@ -7,4 +7,7 @@ migrate:
 
 .PHONY: up
 up:
-	docker-compose up 
+	docker-compose up
+.PHONY: attach
+attach:
+	docker exec -it saboten-web_api_1 bash
