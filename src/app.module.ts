@@ -6,6 +6,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { BookModule } from './modules/book.module';
 import { SampleResolver } from './resolvers/sample.Resolver';
+import { AuthService } from './services/auth/auth.service';
+import { UsersService } from './services/users/users.service';
 
 @Module({
   imports: [BookModule,
@@ -26,6 +28,6 @@ import { SampleResolver } from './resolvers/sample.Resolver';
     })
   ],
   controllers: [AppController],
-  providers: [AppService, SampleResolver],
+  providers: [AppService, SampleResolver, AuthService,],
 })
 export class AppModule {}
