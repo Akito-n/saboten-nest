@@ -8,6 +8,6 @@ export class SampleResolver {
   }
   @Mutation((returns) => Number)
   async updatePost(@Args({name: 'id', type: () => Number}) id: number){
-    return 1
+    return id
   }
 }
